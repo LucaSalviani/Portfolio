@@ -1,0 +1,12 @@
+# CV generation
+generar_cv.py
+*.pdf
+
+# Foto (datos personales)
+FotoCV.jpg
+
+# Claude
+.claude/
+
+# Python
+.venv/

@@ -471,16 +471,31 @@ section {
   letter-spacing: 0.03em;
 }
 
-.project-links { display: flex; gap: 0.6rem; }
+.project-links { display: flex; gap: 0.75rem; }
 
-.project-link { color: var(--muted); transition: color 0.2s; }
-.project-link:hover { color: var(--accent); }
+.project-link {
+  color: var(--accent);
+  transition: color 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+}
+.project-link:hover { color: #fff; transform: scale(1.12); }
+.project-link svg { width: 20px; height: 20px; }
 
 .project-desc {
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.7;
   flex: 1;
+}
+.project-desc code {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: rgba(0, 229, 255, 0.07);
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+  white-space: nowrap;
 }
 
 .project-placeholder {
@@ -497,6 +512,38 @@ section {
   font-size: 0.75rem;
   color: var(--muted);
   letter-spacing: 0.08em;
+}
+
+/* ── PROJECT SUB-LABELS ── */
+.projects-sublabel {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.projects-sublabel::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+}
+.projects-sublabel--mt {
+  margin-top: 3rem;
+}
+
+/* Client-work cards — subtle purple accent instead of cyan */
+.project-card--client {
+  border-color: rgba(123, 97, 255, 0.18);
+}
+.project-card--client:hover {
+  border-color: rgba(123, 97, 255, 0.5);
+  transform: translateY(-3px);
 }
 
 /* ── CONTACT ── */

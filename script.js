@@ -103,12 +103,20 @@ const translations = {
     'about.p2':     "I enjoy challenges, adapt quickly to new environments, and love picking up new technologies. Currently working as a private tutor in English, physics, math, and programming — an experience that sharpened my ability to communicate complex ideas clearly.",
     'skills.languages': 'Languages',
     'skills.tools':     'Frameworks & Tools',
-    'skills.learning':  'Currently learning',
+    'skills.certs':     'Certifications',
+    'skills.exploring': 'Exploring',
     'skills.design':    'Design',
     // Projects
-    'projects.label': 'projects',
-    'projects.title': "What I've built",
-    'projects.soon':  'Projects coming soon…',
+    'projects.label':    'projects',
+    'projects.title':    "What I've built",
+    'projects.soon':     'Projects coming soon…',
+    'projects.personal': 'Personal projects',
+    'projects.clients':  'Freelance work',
+    'project.snake.desc':   'Snake game for the Windows console where the terminal sheds all its properties to become a custom software renderer via the Win32 API. Dynamic Game Talker NPC, top‑3 leaderboard with persistent record storage, and modular four-library architecture.',
+    'project.engine.desc':  '3D raycasting engine rendered entirely in ASCII, applying the terminal-as-renderer technique developed in Console Snake. Implements the DDA algorithm for ray-stepping, distance fog, head-bobbing, a minimap with direction indicator, and 24-bit ANSI colour gradients.',
+    'project.finance.desc': 'Full-stack stock portfolio web app. Secure register & login with password hashing, real-time stock quote lookup, buy/sell shares, and a full transaction history backed by SQLite.',
+    'project.male.desc':    'Professional website for a practicing dermatologist in Buenos Aires. Full technical SEO (Schema.org structured data, Open Graph, sitemap), WhatsApp appointment booking integration, and responsive mobile-first design. Live on Netlify.',
+    'project.korund.desc':  'Corporate website for Korund S.A., an Argentine manufacturer of industrial abrasive wheels. Product catalogue with downloadable technical PDFs, Google Maps integration, multi-device responsive design, and SEO optimisation. Live on Netlify.',
     // Contact
     'contact.label': 'contact',
     'contact.title': "Let's talk",
@@ -133,12 +141,20 @@ const translations = {
     'about.p2':     'Disfruto los desafíos, me adapto rápido a nuevos entornos y me apasiona aprender tecnologías nuevas. Actualmente trabajo como profesor particular de inglés, física, matemática y programación — una experiencia que potenció mi capacidad de comunicar ideas complejas con claridad.',
     'skills.languages': 'Lenguajes',
     'skills.tools':     'Frameworks y Herramientas',
-    'skills.learning':  'Actualmente aprendiendo',
+    'skills.certs':     'Certificándome',
+    'skills.exploring': 'Explorando',
     'skills.design':    'Diseño',
     // Projects
-    'projects.label': 'proyectos',
-    'projects.title': 'Lo que construí',
-    'projects.soon':  'Proyectos próximamente…',
+    'projects.label':    'proyectos',
+    'projects.title':    'Lo que construí',
+    'projects.soon':     'Proyectos próximamente…',
+    'projects.personal': 'Proyectos personales',
+    'projects.clients':  'Trabajo freelance',
+    'project.snake.desc':   'Juego Snake para la consola de Windows donde la terminal pierde todas sus propiedades para convertirse en un renderer de software custom vía Win32 API. Game Talker dinámico, scoreboard con top‑3, registro de récords persistente y arquitectura modular en cuatro librerías.',
+    'project.engine.desc':  'Motor de raycasting 3D renderizado completamente en ASCII, aplicando lo aprendido en Console Snake para usar la terminal como renderer. Implementa el algoritmo DDA para proyección de rayos, niebla de distancia, head‑bobbing, minimapa con indicador de dirección y gradientes de color ANSI de 24 bits.',
+    'project.finance.desc': 'Aplicación web full‑stack de gestión de cartera de acciones. Incluye registro e inicio de sesión con hash de contraseñas, consulta de cotizaciones en tiempo real, compra y venta de acciones, e historial de transacciones persistido en SQLite.',
+    'project.male.desc':    'Sitio web profesional para una dermatóloga con consultorio en Pilar y Núñez, Buenos Aires. SEO técnico completo con datos estructurados Schema.org, Open Graph y sitemap. Integración de turnos vía WhatsApp y diseño responsive mobile‑first. Activo en producción.',
+    'project.korund.desc':  'Sitio corporativo para Korund S.A., fabricante argentino de ruedas abrasivas industriales. Catálogo de productos con fichas técnicas descargables en PDF, integración con Google Maps, diseño responsive multi‑dispositivo y optimización SEO. Activo en Netlify.',
     // Contact
     'contact.label': 'contacto',
     'contact.title': 'Hablemos',
@@ -147,7 +163,7 @@ const translations = {
   },
 };
 
-let currentLang = 'en';
+let currentLang = 'es';
 
 function applyLang(lang) {
   const t = translations[lang];
@@ -173,3 +189,6 @@ function applyLang(lang) {
 document.getElementById('lang-toggle').addEventListener('click', () => {
   applyLang(currentLang === 'en' ? 'es' : 'en');
 });
+
+// Apply default language on load
+applyLang('es');
